@@ -1,0 +1,6 @@
+San Agustin;220;18000,00
+Isidro Ayora;750;30000,00
+San Pablo;350;17000,00
+San Agustin;220;18000,00
+Isidro Ayora;750;30000,00
+San Pablo;350;17000,00
