@@ -13,37 +13,47 @@ public class Hospital implements Serializable {
     private int numeroCamas;
     private double presupuesto;
 
-    public Hospital(String n, int num, double pres){
+    public Hospital(String n, int num, double pres) {
         nombre = n;
         numeroCamas = num;
         presupuesto = pres;
     }
-    
-    public void establecerNombre(String n){
+
+    public void establecerNombre(String n) {
         nombre = n;
-        
+
     }
-    public void establecerNumeroCamas(int n){
+
+    public void establecerNumeroCamas(int n) {
         numeroCamas = n;
-    
+
     }
-    public void establecerPresuspuesto(double n){
+
+    public void establecerPresuspuesto(double n) {
         presupuesto = n;
-    
+
     }
-    
-    public String obtenerNombre(){
+
+    public String obtenerNombre() {
         return nombre;
-    
+
     }
-    
-    public int obtenerNumeroCamas(){
+
+    public int obtenerNumeroCamas() {
         return numeroCamas;
-    
+
     }
-    
-    public double obtenerPresupuesto(){
+
+    public double obtenerPresupuesto() {
         return presupuesto;
-    
+
+    }
+
+    @Override
+    public String toString() {
+        String valor = String.format("%s-%d-%.2f\n", obtenerNombre(),
+                obtenerNumeroCamas(),
+                obtenerPresupuesto());
+        return valor;
     }
 }
