@@ -7,12 +7,43 @@ package paquete5;
 
 import java.io.Serializable;
 
-/**
- *
- * @author reroes
- */
-public class Hospital implements Serializable{
-    String nombre;
-    int numeroCamas;
-    double presupuesto;
+public class Hospital implements Serializable {
+
+    private String nombre;
+    private int numeroCamas;
+    private double presupuesto;
+
+    public Hospital(String n, int num, double pres){
+        nombre = n;
+        numeroCamas = num;
+        presupuesto = pres;
+    }
+    
+    public void establecerNombre(String n){
+        nombre = n;
+        
+    }
+    public void establecerNumeroCamas(int n){
+        numeroCamas = n;
+    
+    }
+    public void establecerPresuspuesto(double n){
+        presupuesto = n;
+    
+    }
+    
+    public String obtenerNombre(){
+        return nombre;
+    
+    }
+    
+    public int obtenerNumeroCamas(){
+        return numeroCamas;
+    
+    }
+    
+    public double obtenerPresupuesto(){
+        return presupuesto;
+    
+    }
 }
