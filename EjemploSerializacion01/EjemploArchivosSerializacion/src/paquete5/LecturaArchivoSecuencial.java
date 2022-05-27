@@ -16,6 +16,7 @@ public class LecturaArchivoSecuencial {
     private String nombreArchivo;
     private String identificador;
     private Hospital hospitalBuscado;
+    
 
     public LecturaArchivoSecuencial(String n) {
         nombreArchivo = n;
@@ -77,7 +78,7 @@ public class LecturaArchivoSecuencial {
                 try {
                     Hospital registro = (Hospital) entrada.readObject();
 
-                    if (registro.obtenerNombre().equals(identificador)) {
+                    if (registro.obtenerIdHospital().equals(identificador)) {
                         hospitalBuscado = registro;
                         break;
                     }
@@ -117,14 +118,15 @@ public class LecturaArchivoSecuencial {
 
     @Override
     public String toString() {
-        String cadena = "Lista de Profesores\n";
+        String cadena = "Lista de Hospitales\n";
         for (int i = 0; i < obtenerHospitales().size(); i++) {
             Hospital h = obtenerHospitales().get(i);
-            cadena = String.format("%s(%d) %s-%d-%.2f\n", cadena,
+            cadena = String.format("%s(%d) %s-%d-%.2f-%s\n", cadena,
                     i + 1,
                     h.obtenerNombre(),
                     h.obtenerNumeroCamas(),
-                    h.obtenerPresupuesto());
+                    h.obtenerPresupuesto(),
+                    h.obtenerIdHospital());
         }
 
         return cadena;

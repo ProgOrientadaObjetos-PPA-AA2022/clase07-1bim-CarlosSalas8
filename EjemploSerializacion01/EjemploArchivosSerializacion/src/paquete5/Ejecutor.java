@@ -10,9 +10,9 @@ public class Ejecutor {
     public static void main(String[] args) {
         String nombreArchivo = "data/hospitales.data";
 
-        Hospital hosp1 = new Hospital("Clínica San Agustín",200, 200000);
-        Hospital hosp2 = new Hospital("Hospital UTPL",300, 180000);
-        Hospital hosp3 = new Hospital("Hospital del Seguro",400, 320000);
+        Hospital hosp1 = new Hospital("San Agustin",220,18000,"124");
+        Hospital hosp2 = new Hospital("Isidro Ayora",750,30000,"157");
+        Hospital hosp3 = new Hospital("San Pablo",350,17000,"145");
 
         EscrituraArchivosSecuencial archivo
                 = new EscrituraArchivosSecuencial(nombreArchivo);
