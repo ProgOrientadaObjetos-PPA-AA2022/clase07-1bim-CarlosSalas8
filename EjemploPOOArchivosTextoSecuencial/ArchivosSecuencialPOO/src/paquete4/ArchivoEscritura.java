@@ -57,9 +57,9 @@ public class ArchivoEscritura {
     public void establecerSalida() {
         try {
             salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));
-            Empresa p = obtenerRegistro();
+            Empresa emp = obtenerRegistro();
             String cadenaRegistro = String.format("%s;%s",
-                    p.obtenerNombre(), p.obtenerCiudad());
+                    emp.obtenerNombre(), emp.obtenerCiudad());
             salidaArchivo.format("%s\n", cadenaRegistro);
             salidaArchivo.close();
         } catch (Exception e) {

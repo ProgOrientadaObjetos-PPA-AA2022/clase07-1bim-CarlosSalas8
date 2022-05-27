@@ -70,9 +70,9 @@ public class ArchivoLectura {
                 ArrayList<String> linea_partes = new ArrayList<>(
                         Arrays.asList(linea.split(";"))
                 );
-                Empresa p = new Empresa(linea_partes.get(0),
+                Empresa emp = new Empresa(linea_partes.get(0),
                         linea_partes.get(1));
-                lista.add(p);
+                lista.add(emp);
 
             } // fin de while
         }
